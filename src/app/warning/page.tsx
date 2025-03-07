@@ -94,7 +94,7 @@ function WarningPageContent() {
                 You are about to be redirected to:
                 <div className="mt-2 p-3 bg-gray-800 rounded-md flex items-center">
                   <LinkIcon className="h-5 w-5 text-gray-500 mr-2 flex-shrink-0" />
-                  <div className="truncate font-medium text-blue-300">{destination}</div>
+                  <div className="truncate font-medium text-blue-300">{decodeURI(destination || "")}</div>
                 </div>
               </div>
               
