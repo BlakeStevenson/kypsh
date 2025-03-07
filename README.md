@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# kypsh
 
-## Getting Started
+**Know Your Path - Safer Hyperlinks**
 
-First, run the development server:
+A URL shortener service that adds content warnings to links before redirecting users.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## About
+
+kypsh (pronounced "kip-sh") lets you share links with built-in content warnings. When users click a kypsh link, they see a brief warning about the content they're about to view, giving them the choice to proceed or exit.
+
+## Features
+
+- **URL Shortening**: Create compact links that redirect to your original URLs
+- **Content Warnings**: Add standardized or custom warning messages
+- **Warning Categories**:
+  - NSFW (Not Safe For Work)
+  - Potentially Triggering
+  - Custom Warnings
+- **Clean Interface**: Simple, accessible, and mobile-friendly design
+
+## How It Works
+
+1. Enter the URL you want to share
+2. Select a warning category or create a custom message
+3. Customize warning appearance (optional)
+4. Get your shortened URL (kyp.sh/xyz)
+5. When someone accesses your link, they'll see the warning before proceeding
+
+## Example
+
+Original link:
+```
+https://example.com/very-long-article-about-sensitive-political-topics-from-2023
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Shortened link with warning:
+```
+https://kyp.sh/p7k2x
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Use Cases
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Sharing sensitive or potentially triggering content
+- Providing context before users visit a site
+- Educational contexts where content warnings are appropriate
+- Professional settings when sharing links that might not be safe for work
+- Phishing training simulations with clear warnings
