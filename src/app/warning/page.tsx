@@ -1,9 +1,10 @@
 "use client";
 import { useSearchParams, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { AlertTriangle, Link as LinkIcon, ArrowLeft } from 'lucide-react';
 
-export default function WarningPage() {
+// Create a wrapper component that uses searchParams
+function WarningPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [countdown, setCountdown] = useState(10);
@@ -128,5 +129,25 @@ export default function WarningPage() {
         </footer>
       </div>
     </div>
+  );
+}
+
+// Create a loading fallback component
+function WarningPageLoading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900 text-white flex items-center justify-center">
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-gray-200 mb-4">Loading warning page...</h2>
+      </div>
+    </div>
+  );
+}
+
+// Main component that wraps the content with Suspense
+export default function WarningPage() {
+  return (
+    <Suspense fallback={<WarningPageLoading />}>
+      <WarningPageContent />
+    </Suspense>
   );
 }
