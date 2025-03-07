@@ -42,7 +42,7 @@ export async function GET(
     // Check if warning is needed
     if (urlEntry.warning_type || urlEntry.custom_warning) {
       // Redirect to warning page with parameters
-      const warningUrl = new URL('/warning', request.url);
+      const warningUrl = new URL('https://kyp.sh/warning');
       warningUrl.searchParams.set('destination', urlEntry.original_url);
       
       if (urlEntry.warning_type) {
